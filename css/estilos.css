@@ -1,0 +1,238 @@
+.slideLi
+{
+	width: 475px;	/* Importante! */
+	height: 175px;	/* Importante! */
+	border:1px solid #DDD;
+	margin:0 auto;
+	margin-top:20px;
+}
+.slideLi .botonera
+{
+	position:absolute;
+	width:125px;
+	height:40px;
+	bottom:10px;
+	right:10px;
+}
+.slideLi .botonera a
+{
+	height:32px;
+}
+.slideLi .prevBtn
+{
+	background:url(../images/back.gif);
+	width:32px;
+	display:inline-block;
+}
+.slideLi .pauseBtn
+{
+	background:url(../images/pause.gif);
+	width:32px;
+	display:inline-block;
+}
+.slideLi .playBtn
+{
+	background:url(../images/play.gif);
+	display:none;
+	width:32px;
+}
+.slideLi .nextBtn
+{
+	background:url(../images/next.gif);
+	width:32px;
+	display:inline-block;
+}
+
+.slideLi .contenido
+{
+	color:white;
+}
+.slideLi .texto
+{
+	padding:20px;
+	display:block;
+	font-family:Georgia;
+}
+.slideLi .segundo
+{
+	color:white;
+	font-family:Georgia;
+	background:url(../images/rotador02.jpg);
+}
+.slideLi .tercero
+{
+	background:url(../images/rotador03.jpg);
+	text-align:right;
+	color:black;
+}
+.slideLi .cuarto
+{
+	background:url(../images/rotador04.jpg);
+}
+
+/* Inicio:	FORMULARIO */
+form {
+	background:#fff;
+	padding:1em;
+	border:1px solid #eee;
+	font-family:Georgia,"Times New Roman",Times,serif;
+}
+fieldset div {
+	margin:0.3em 0;
+	clear:both;
+}
+form {
+	margin:1em;
+	width:90%;
+}
+label {
+	float:left;
+	width:10em;
+	text-align:right;
+	margin-right:1em;
+}
+legend {
+	color:#0b77b7;
+	font-size:1.2em;
+}
+legend span {
+	width:10em;
+	text-align:right;
+}
+input {
+	padding:0.15em;
+	width:20em;
+	border:1px solid #ddd;
+	background:#fafafa;
+	font:bold 0.95em arial, sans-serif;
+	/*-moz-border-radius:0.4em;
+	-khtml-border-radius:0.4em;*/
+}
+input:hover, input:focus {
+	border-color:#c5c5c5;
+	background:#f6f6f6;
+} 
+fieldset {
+	border:1px solid #ddd;
+	padding:0 0.5em 0.5em;
+}
+textarea {
+	/*-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	-moz-border-radius-bottomleft:0.4em;
+	-moz-border-radius-bottomright:0.4em;
+	-moz-border-radius-topleft:0.4em;
+	-moz-border-radius-topright:0.4em;
+	-x-system-font:none;*/
+	background:#FAFAFA none repeat scroll 0 0;
+	border:1px solid #DDDDDD;
+	font-family:arial,sans-serif;
+	font-size:0.95em;
+	/*font-size-adjust:none;
+	font-stretch:normal;*/
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:normal;
+	padding:0.15em;
+	width:30em;
+	height:10em;
+}
+textarea:hover
+{
+	border-color:#c5c5c5;
+	background:#f6f6f6;
+}
+.boton
+{
+	cursor:pointer;
+}
+
+#escribir_comentario
+{
+	
+}
+#escribir_comentario div
+{
+	clear:none;
+}
+#escribir_comentario .preview
+{
+	
+}
+#escribir_comentario .preview .izquierda
+{
+	float:left;
+	width:30%;
+}
+#escribir_comentario .preview .derecha
+{
+	float:left;
+	width:70%;
+}
+#escribir_comentario .preview .nombre
+{
+	display:block;
+	font-size:20px;
+	text-align:center;
+}
+#escribir_comentario .preview .avatar
+{
+	width:80px;
+	height:80px;
+	margin:0 auto;
+}
+#escribir_comentario .preview .comentario
+{
+	width:400px;
+}
+/* Fin:		FORMULARIO */
+/*
+	* COMENTARIOS
+*/
+#leer_comentarios
+{
+	margin:1em;
+	width:90%;
+	border:1px solid #EEEEEE;
+	font-family:Georgia;
+	overflow:hidden;
+	padding:20px 5px;
+}
+#leer_comentarios .comentario
+{
+	float:left;
+	margin:0 0 30px 0;
+	overflow:hidden;
+	padding:0 0 20px;
+	border-bottom:1px solid #DDD;
+	width:100%;
+}
+#leer_comentarios .comentario .izquierda
+{
+	float:left;
+	width:30%;
+}
+#leer_comentarios .comentario .derecha
+{
+	float:left;
+	width:70%;
+}
+#leer_comentarios .comentario .nombre
+{
+	display:block;
+	font-size:20px;
+	text-align:center;
+}
+#leer_comentarios .comentario .avatar
+{
+	width:80px;
+	height:80px;
+	margin:0 auto;
+	padding: 5px;
+}
+#leer_comentarios .comentario .texto
+{
+	width:400px;
+}

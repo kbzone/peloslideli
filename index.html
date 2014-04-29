@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>jQuery.PeloSlideLi.js</title>
+<meta name="title" content="jQuery.PeloSlideLi.js" />
+<meta name="description" content="Liviano Slide de contenido Html, fácil de implementar." />
+<link rel="image_src" type="image/gif" href="images/icon-facebook.gif" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+<link rel="icon" href="images/favicon.gif" type="image/gif" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link  type="text/css" rel="stylesheet" href="css/estilos.css" />
+<script type="text/javascript" src="javascript/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="javascript/peloslideli.v2.0.min.js"></script>
+<script type="text/javascript" src="javascript/public.js"></script>
+<script type="text/javascript" src="javascript/syntaxhighlighter/scripts/shCore.js"></script>
+<script type="text/javascript" src="javascript/syntaxhighlighter/scripts/shBrushCss.js"></script>
+<script type="text/javascript" src="javascript/syntaxhighlighter/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="javascript/syntaxhighlighter/scripts/shBrushPhp.js"></script>
+<script type="text/javascript" src="javascript/syntaxhighlighter/scripts/shBrushPlain.js"></script>
+<script type="text/javascript" src="javascript/syntaxhighlighter/scripts/shBrushXml.js"></script>
+<link type="text/css" rel="stylesheet" href="javascript/syntaxhighlighter/styles/shCore.css"/>
+<link type="text/css" rel="stylesheet" href="javascript/syntaxhighlighter/styles/shThemeDefault.css"/>
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+</head>
+<body>
+<div id="panelSuperior">
+	<a href="index.html"><img src="images/peloslide.png" alt="PeloSlideli" class="logo" /></a>
+	<p>Liviano Slide de contenido Html, fácil de implementar.</p>
+		
+  <div id="panelContactoSuperior">
+  </div>
+	<div id="panelMenuSuperior">
+	  <div id="panelMenuIzquierdo"></div>
+	  
+	  <div id="panelMenuMedio">
+	  	<ul>
+			<li class="home">Home</li>
+			<li><a href="#instalacion">Instalación</a></li>
+			<li><a href="#implementacion">Implementación</a></li>
+			<li><a href="#documentacion">Documentación</a></li>
+			<li><a href="#licencia">Licencia</a></li>
+			<li><a href="http://www.peloslideli.com.ar/download.php">Download</a></li>
+			<li class="contact"><a href="http://www.kbzone.com.ar/index.php#contacto" class="contact">Contacto</a></li>
+		</ul>
+	  </div>
+	  <div id="panelMenuDerecho"></div>
+	</div>	
+</div>
+
+<div id="panelCuerpo">
+  <div id="panelCuerpoIzquierdo">
+  
+  	<h2>sobre <span>jQuery.PeloSlideLi.js</span></h2>
+	<p><span>PeloSlideLi</span> es un Plugin para jQuery, lanzado por primera vez el 10 de Enero del 2010. Nos permite transformar una lista en un Slide, con cualquier contenido HTML. Totalmente personalizable vía CSS logrando una integración muy simple y rápida a nuestros proyectos.</p>
+	<p>El objetivo principal de este plugin, es que sea <span>rápido y fácil de implementar</span>, con pocos pasos en la configuracion la instalación se hace bastante intuitiva.</p>
+  	
+	<a href="#" name="instalacion"></a>
+	<h2>cómo <span>instalarlo</span> en nuestro proyecto</h2>
+	<p>Antes que nada, deberás subir todos los archivos para luego acceder a ellos.<br />
+	Al ser un Plugin basado en jQuery, es obvio que debes incluir la librería en tu sitio.<br />
+	Puedes incluirlo desde el <span>repositorio de Google</span>:<br /></p>
+	<br />
+    <pre class="brush: js;">&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js&quot;&gt;&lt;/script&gt;</pre>
+	<br />
+	<p>
+	Luego, incluyes el plugin <span>PeloSlideLi</span>.<br />
+	</p>
+	<br />
+<pre class="brush: js;">&lt;script type=&quot;text/javascript&quot; src=&quot;javascript/PeloSlideLi.js&quot;&gt;&lt;/script&gt;</pre>
+	<!--</div>-->
+	<br />
+	<p>
+	<span>* Nota:</span> <i>Si quieres ahorrar ancho de banda en tu servidor, puedes agregar la versión comprimida del plugin: <b>peloslideli.v2.0.min.js</b>.</i><br /> 
+	Luego, incluyes la hoja de estilos.<br />
+	</p>
+	<br />
+	<pre class="brush: css;">&lt;link  type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/estilos.css&quot; /&gt;</pre>
+	<!--</div>-->
+	<br />
+	<p>
+	<span>* Nota:</span> <i>Recuerda que es importante que indiques el <b>ancho</b> y el <b>alto</b> del wrapper que contendrá la lista.</i></p>
+	<br />
+	<!--<div class="codigo">-->
+	<pre class="brush: css;">
+#slideLi
+{
+	width: 475px; /* Importante! */
+	height: 175px; /* Importante! */
+}</pre>
+	<br />
+	<a href="#" name="implementacion"></a>
+	<h2><span>implementación</span> del plugin</h2>
+
+	<p>
+	Una vez realizado la instalación de los archivos en nuestro servidor y la configuración de nuestra hoja de estilos, agregamos el código HTML.<br />
+	</p>
+	<br />
+	<pre class="brush: html;">
+&lt;div id="slideli"&gt; &lt;!-- wrapper --&gt;
+	&lt;ul&gt;
+		&lt;li&gt;(Primer Slide)&lt;/li&gt;
+		&lt;li&gt;(Segundo Slide)&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;div class=&quot;botonera&quot;&gt; &lt;!-- botones de reproducción --&gt;
+		&lt;a href=&quot;index.php&quot; class=&quot;prevBtn&quot;&gt;&lt;/a&gt;
+		&lt;a href=&quot;index.php&quot; class=&quot;pauseBtn&quot;&gt;&lt;/a&gt;
+		&lt;a href=&quot;index.php&quot; class=&quot;playBtn&quot;&gt;&lt;/a&gt;
+		&lt;a href=&quot;index.php&quot; class=&quot;nextBtn&quot;&gt;&lt;/a&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</pre>
+	<br />
+	<p>
+	Y luego nos resta nada más declarar la función.
+	</p>
+	<br />
+	<pre class="brush: js;">
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(&quot;#slideLi&quot;).PeloSlideLi({
+	pause: 10000,
+	autoStart: true,
+	direction: &quot;horizontal&quot;
+});
+&lt;/script&gt;</pre>
+	
+	<a href="#" name="documentacion"></a>
+	<h2>la <span>documentación</span> del plugin</h2>
+	
+	<p>
+	Los siguientes <span>parámetros opcionales</span> están habilitados para crear la clase.<br />
+	<br />
+	<b><u>prevId</u></b>: Nombre de la clase para la función Anterior.<br />
+	<b><u>nextId</u></b>: Nombre de la clase para la función Siguiente.<br />
+	<b><u>pauseId</u></b>: Nombre de la clase para la función Pausa.<br />
+	<b><u>playId</u></b>: Nombre de la clase para la función Play.<br />
+	<b><u>speed</u></b>: (milisegundos) Velocidad de transición del Slide.<br />
+	<b><u>autoStart</u></b>: (boolean) Iniciar o no el Slide al cargar la página.<br />
+	<b><u>pause</u></b>: (milisegundos) Retardo entre un cuadro y otro.<br />
+	<b><u>direction</u></b>: ("vertical" / "horizontal") Dirección del Slide.<br />
+	</p>
+
+	<h2><span>ejemplos</span> de implementación</h2>
+	<p>
+	* <strong>Horizontal</strong>.<br />
+	* <strong>Auto Start</strong>.<br />
+	</p>
+	
+	<div class="slideLi slide1">
+		<ul>
+			<li>
+				<div class="contenido primero">
+					<img src="images/rotador01.png" alt="SlideShow de imagenes!" />
+				</div>
+			</li>
+			<li class="segundo">
+				<div class="contenido">
+					<span class="texto">
+						¡También puedes agregar contenido HTML!<br />
+						<b>PeloSlideLi</b> es muy liviano, haciendo que la velocidad de carga de tu sitio sea muy veloz!
+					</span>
+				</div>
+			</li>
+			<li class="tercero">
+				<div class="contenido">
+					<span class="texto">
+						Gracias a la flexibilidad de <b>PeloSlideLi</b><br />
+						se vuelve muy personalizable,<br />
+						gracias a las hojas de estilo CSS,<br />
+						sin engorrosas ni numerosas líneas de código.
+					</span>
+				</div>
+			</li>
+			<li class="cuarto">
+			</li>
+		</ul>
+		<div class="botonera">
+			<a href="index.php" class="prevBtn"></a><a href="index.php" class="pauseBtn"></a><a href="index.php" class="playBtn"></a><a href="index.php" class="nextBtn"></a>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(".slide1").PeloSlideLi({
+			pause: 10000,
+			speed: 500,
+			autoStart: true,
+			direction: "horizontal"
+		});
+	});
+	</script>
+	<pre class="brush: js;">
+	$(document).ready(function() {
+		$(".slide1").PeloSlideLi({
+			pause: 10000,
+			speed: 500,
+			autoStart: true,
+			direction: "horizontal"
+		});
+	});</pre>
+	<hr />
+
+	<p>
+	* <strong>Vertical</strong>.<br />
+	</p>
+	
+	<div class="slideLi slide2">
+		<ul>
+			<li>
+				<div class="contenido primero">
+					<img src="images/rotador01.png" alt="SlideShow de imagenes!" />
+				</div>
+			</li>
+			<li class="segundo">
+				<div class="contenido">
+					<span class="texto">
+						¡También puedes agregar contenido HTML!<br />
+						<b>PeloSlideLi</b> es muy liviano, haciendo que la velocidad de carga de tu sitio sea muy veloz!
+					</span>
+				</div>
+			</li>
+			<li class="tercero">
+				<div class="contenido">
+					<span class="texto">
+						Gracias a la flexibilidad de <b>PeloSlideLi</b><br />
+						se vuelve muy personalizable,<br />
+						gracias a las hojas de estilo CSS,<br />
+						sin engorrosas ni numerosas líneas de código.
+					</span>
+				</div>
+			</li>
+			<li class="cuarto">
+			</li>
+		</ul>
+		<div class="botonera">
+			<a href="index.php" class="prevBtn"></a><a href="index.php" class="pauseBtn"></a><a href="index.php" class="playBtn"></a><a href="index.php" class="nextBtn"></a>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$(".slide2").PeloSlideLi({
+			speed: 100,
+			autoStart: false,
+			direction: "vertical"
+		});
+	});
+	</script>
+	<pre class="brush: js;">
+	$(document).ready(function() {
+		$(".slide2").PeloSlideLi({
+			speed: 100,
+			autoStart: false,
+			direction: "vertical"
+		});
+	});</pre>
+	
+	<a href="#" name="licencia"></a>
+	<h2><span>licencia</span> de uso</h2>
+	<p>
+		El script es publicado bajo la licencia <a href="http://es.wikipedia.org/wiki/Licencia_MIT">MIT</a>.
+	</p>
+	
+	<h2><span>créditos</span></h2>
+	<p>
+		Producto desarrollado por <b>Cabello H. Guillermo</b>, para <a href="http://www.kbzone.com.ar/">KbZone Desarrollos web</a>.<br />
+		<a href="http://www.kbzone.com.ar/"><img src="images/logo.jpg" alt="www.kbzone.com.ar" /></a><br />
+	</p>
+	<p>
+		Íconos, diseños del Isologo, y colaboraciones varias de <b>Eduardo Sada</b>.
+	</p>
+	
+  </div>
+  
+</div>
+
+<div id="panelFooterPrincipal">
+  <div id="panelFooter">
+  	<ul>
+		<li>Home |</li>
+		<li><a href="#instalacion">Instalación</a> |</li>
+		<li><a href="#implementacion">Implementación</a> |</li>
+		<li><a href="#documentacion">Documentación</a> |</li>
+		<li><a href="#licencia">Licencia</a> |</li>
+		<li><a href="#download">Download</a> |</li>
+		<li><a href="http://www.kbzone.com.ar/index.php#contacto" class="contact">Contacto</a></li>
+	</ul>
+	<p class="copyright"><b>©jQuery.PeloSlideli.js</b> - Todos los Derechos Reservados.</p>
+  <div id="panelFooterhtml"><a href="http://validator.w3.org/check?uri=referer" target="_blank">HTML</a></div>
+    <div id="panelFootercss"><a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">css</a></div>
+  </div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-12494101-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
+<?php die() ?>
