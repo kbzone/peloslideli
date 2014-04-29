@@ -1,0 +1,4 @@
+peloslideli
+===========
+
+Simple slider
